@@ -146,6 +146,17 @@ async function updatePost(postId, fields = {}) {
       return rows;
     }
     
+    async function getAllTags() {
+      const { rows } = await client.query(`SELECT id, username, password, name, location, active FROM users`);
+  
+      return rows;
+      }
+
+      async function getAllPosts() {
+        const { rows } = await client.query(`SELECT id, username, password, name, location, active FROM users`);
+    
+        return rows;
+        }
 
     async function getPostsByUser(userId) {
       try {
@@ -310,4 +321,6 @@ async function updatePost(postId, fields = {}) {
     addTagsToPost,
     getPostById,
     getPostsByTagName,
+    getAllTags,
+    getAllPosts,
   }
