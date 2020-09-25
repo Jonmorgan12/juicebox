@@ -12,6 +12,7 @@ const {
     getPostsByTagName,
     getAllTags,
     getAllPosts,
+    getUserByUsername,
   } = require('./index');
   
   async function dropTables() {
@@ -117,7 +118,6 @@ const {
         title: "Glamgals First Post",
         content: "This is my first post. I hope I love writing blogs as much as I love writing them.",
         tags: ["#happy", "#youcandoanything", "#canmandoeverything"]
-
       });
   
     } catch (error) {
