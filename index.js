@@ -9,7 +9,7 @@ server.use(morgan('dev'));
 const bodyParser = require('body-parser');
 server.use(bodyParser.json());
 
-const apiRouter = require('./api');
+const apiRouter = require('./api'); 
 server.use('/api', apiRouter);
 
 const { client } = require('./db');
