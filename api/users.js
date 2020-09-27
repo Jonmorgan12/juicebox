@@ -73,11 +73,6 @@ usersRouter.post('/login', async (req, res, next) => {
       const token = jwt.sign(user, JWT_SECRET);
       console.log('token: ', token)
 
-      // const recoveredData = jwt.verify(token, JWT_SECRET);
-      // console.log(recoveredData, 'recoveredData')
-
-      // res.status(status).send(body)
-
       res.send({ message: "you're logged in!", token });
 
       return user;
